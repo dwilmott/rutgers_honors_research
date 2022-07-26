@@ -1,0 +1,153 @@
+expData <- matrix(99, nrow = 50, ncol = 4)
+colnames(expData) <-c( 'Mean', 'Cntrl', 'Treat', 'Treat - Cntrl')
+meanSamp <- rnorm(50)
+expData[ 1:50 , 1 ] <- meanSamp[1:50]
+for( i in 1:50){
+	values <- rnorm(2, expData[ i ,1],1)
+	expData[i, 2] <- values[1]
+	expData[i, 3] <- values[2]
+	expData[i, 4] <- (values[2]-values[1])
+}
+
+rndmIndex <- sample.int(50, 10, replace = FALSE)
+expData[rndmIndex,3] <- '+'(expData[rndmIndex,3],3)
+expData[rndmIndex,4]<- expData[rndmIndex,3] - expData[rndmIndex,2]
+
+sigmaDiffBetweenMeans <- sd(expData[,4])
+effectSize <- (mean(expData[,3])-mean(expData[,2]))/sd(expData[,2])
+
+Data <- c(expData[,3], expData[,2])
+group <- c(seq(from=0,to=0,length.out=50),seq(from=1,to=1,length.out=50))
+
+t.test( Data ~ group , paired = TRUE)
+effectSize
+
+sigmaDiffBetweenMeans
+
+rndmIndex
+
+expData
+
+expData1 <- matrix(99, nrow = 50, ncol = 4)
+colnames(expData1) <-c( 'Mean', 'Cntrl', 'Treat', 'Treat - Cntrl')
+meanSamp1 <- rnorm(50)
+expData1[ 1:50 , 1 ] <- meanSamp1[1:50]
+for( i in 1:50){
+	values <- rnorm(2, expData1[ i ,1],1)
+	expData1[i, 2] <- values[1]
+	expData1[i, 3] <- values[2]
+	expData1[i, 4] <- (values[2]-values[1])
+}
+
+
+rndmIndex1 <- sample.int(50, 10, replace = FALSE)
+expData1[rndmIndex1,3] <- '+'(expData1[rndmIndex1,3],3)
+expData1[rndmIndex1,4]<- expData1[rndmIndex1,3] - expData1[rndmIndex1,2]
+
+sigmaDiffBetweenMeans1 <- sd(expData1[,4])
+effectSize1 <- (mean(expData1[,3])-mean(expData1[,2]))/sd(expData1[,2])
+
+Data <- c(expData1[,3], expData1[,2])
+group <- c(seq(from=0,to=0,length.out=50),seq(from=1,to=1,length.out=50))
+
+t.test( Data ~ group , paired = TRUE)
+effectSize1
+
+sigmaDiffBetweenMeans1
+
+rndmIndex1
+
+expData1
+
+expData2 <- matrix(99, nrow = 50, ncol = 4)
+colnames(expData2) <-c( 'Mean', 'Cntrl', 'Treat', 'Treat - Cntrl')
+meanSamp2 <- rnorm(50)
+expData2[ 1:50 , 1 ] <- meanSamp2[1:50]
+for( i in 1:50){
+	values <- rnorm(2, expData2[ i ,1],1)
+	expData2[i, 2] <- values[1]
+	expData2[i, 3] <- values[2]
+	expData2[i, 4] <- (values[2]-values[1])
+}
+
+
+rndmIndex2 <- sample.int(50, 10, replace = FALSE)
+expData2[rndmIndex2,3] <- '+'(expData2[rndmIndex2,3],3)
+expData2[rndmIndex2,4]<- expData2[rndmIndex2,3] - expData2[rndmIndex2,2]
+
+sigmaDiffBetweenMeans2 <- sd(expData2[,4])
+effectSize2 <- (mean(expData2[,3])-mean(expData2[,2]))/sd(expData2[,2])
+
+Data <- c(expData2[,3], expData2[,2])
+group <- c(seq(from=0,to=0,length.out=50),seq(from=1,to=1,length.out=50))
+
+t.test( Data ~ group , paired = TRUE)
+effectSize2
+
+sigmaDiffBetweenMeans2
+
+rndmIndex2
+
+expData2
+
+expData3 <- matrix(99, nrow = 50, ncol = 4)
+colnames(expData3) <-c( 'Mean', 'Cntrl', 'Treat', 'Treat - Cntrl')
+meanSamp3 <- rnorm(50)
+expData3[ 1:50 , 1 ] <- meanSamp3[1:50]
+for( i in 1:50){
+	values <- rnorm(2, expData3[ i ,1],1)
+	expData3[i, 2] <- values[1]
+	expData3[i, 3] <- values[2]
+	expData3[i, 4] <- (values[2]-values[1])
+}
+
+
+rndmIndex3 <- sample.int(50, 10, replace = FALSE)
+expData3[rndmIndex3,3] <- '+'(expData3[rndmIndex3,3],3)
+expData3[rndmIndex3,4]<- expData3[rndmIndex3,3] - expData3[rndmIndex3,2]
+
+sigmaDiffBetweenMeans3 <- sd(expData3[,4])
+effectSize3 <- (mean(expData3[,3])-mean(expData3[,2]))/sd(expData3[,2])
+
+Data <- c(expData3[,3], expData3[,2])
+group <- c(seq(from=0,to=0,length.out=50),seq(from=1,to=1,length.out=50))
+
+t.test( Data ~ group , paired = TRUE)
+effectSize3
+
+sigmaDiffBetweenMeans3
+
+rndmIndex3
+
+expData3
+
+expData4 <- matrix(99, nrow = 50, ncol = 4)
+colnames(expData4) <-c( 'Mean', 'Cntrl', 'Treat', 'Treat - Cntrl')
+meanSamp4 <- rnorm(50)
+expData4[ 1:50 , 1 ] <- meanSamp4[1:50]
+for( i in 1:50){
+	values <- rnorm(2, expData4[ i ,1],1)
+	expData4[i, 2] <- values[1]
+	expData4[i, 3] <- values[2]
+	expData4[i, 4] <- (values[2]-values[1])
+}
+
+
+rndmIndex4 <- sample.int(50, 10, replace = FALSE)
+expData4[rndmIndex4,3] <- '+'(expData4[rndmIndex4,3],3)
+expData4[rndmIndex4,4]<- expData4[rndmIndex4,3] - expData4[rndmIndex4,2]
+
+sigmaDiffBetweenMeans4 <- sd(expData4[,4])
+effectSize4 <- (mean(expData4[,3])-mean(expData4[,2]))/sd(expData4[,2])
+
+Data <- c(expData4[,3], expData4[,2])
+group <- c(seq(from=0,to=0,length.out=50),seq(from=1,to=1,length.out=50))
+
+t.test( Data ~ group , paired = TRUE)
+effectSize4
+
+sigmaDiffBetweenMeans4
+
+rndmIndex4
+
+expData4
